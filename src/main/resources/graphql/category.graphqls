@@ -1,0 +1,12 @@
+type BookCategory {
+    id: ID!
+    name: String!
+}
+
+type Query {
+  findAllCategory: [BookCategory]!  
+}
+
+type Mutation{
+	newBookCategory(name: String!) : BookCategory!
+}

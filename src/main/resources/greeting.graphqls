@@ -1,0 +1,16 @@
+schema {
+ query : Query
+}
+
+type Query {
+	getGreeting(id: String): Greeting
+}
+
+type Mutation {
+	newGreeting(message: String): Greeting
+}
+
+type Greeting {
+	id: String
+	message: String
+}

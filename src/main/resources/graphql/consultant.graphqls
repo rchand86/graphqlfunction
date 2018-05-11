@@ -1,0 +1,24 @@
+type PdConsultant {	
+	id: ID!
+	firstName: String
+	surname: String
+	middleName: String
+	jobTitle: String
+	title: String
+	mobile: String
+	businessPhone: String
+	privatePhone: String
+	email: String
+	employmentNumber: Int
+	loginName: String!
+	achievementType: Int
+	bonusPoints: Int
+}
+
+extend type Query {
+	getConsultantDetails(loginName: String!): PdConsultant!
+}
+
+type Mutation {
+	newConsultant(name: String!): PdConsultant!
+}
